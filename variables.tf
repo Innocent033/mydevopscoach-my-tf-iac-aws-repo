@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "key_name" {
   description = " SSH keys to connect to ec2 instance"
-  default     =  "Demo-Web"
+  default     =  "eks"
 }
 
 variable "instance_type" {
@@ -14,8 +14,7 @@ variable "instance_type" {
 }
 
 variable "security_group" {
-  description = "Name of security group"
-  default     = "my-jenkins-security-group"
+   default     = "default"
 }
 
 variable "tag_name" {
@@ -25,5 +24,5 @@ variable "tag_name" {
 
 variable "ami_id" {
   description = "AMI for Ubuntu Ec2 instance"
-  default     = "ami-0b9064170e32bde34"
+  default     = "ami-02d1e544b84bf7502"
 }

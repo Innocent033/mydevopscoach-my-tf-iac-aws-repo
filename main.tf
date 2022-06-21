@@ -1,28 +1,18 @@
 provider "aws" {
 region = var.aws_region
-access_key = "AKIAXV4I4PUJ4SKF4LIT"
-secret_key = "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"
-endpoints {
-sts = "https://sts.ap-south-1.amazonaws.com"
+access_key = "AKIA6MAUAP5XYJF2FENP"
+secret_key = "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"
 }
-assume_role {
-role_arn = "arn:aws:iam::528031186195:role/terraform"
-session_name = "terraform_session_name"
-}
-}
-
 #Create security group with firewall rules
 resource "aws_security_group" "my_security_group" {
   name        = var.security_group
   description = "security group for Ec2 instance"
-
   ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
  ingress {
     from_port   = 22
     to_port     = 22
